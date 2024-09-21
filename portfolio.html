@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sanya Gera's Portfolio</title>
+        <link rel="stylesheet" href="../css/style2.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script>
+        (function(){
+            emailjs.init("sanyagera.in@gmail.com"); // Replace with your EmailJS user ID
+        })();
+    </script>
+    </head>
+
+    <body>
+
+        <header class="main-header">
+            <div class="container">
+                <div id="name-logo">
+                    <img src="../images/my-images/icons8-old-vmware-logo.svg" id="logo">
+                    <p>Sanya Gera</p>
+                </div>
+                <ul>
+                    <li><a href="#introduction">About Me</a></li>
+                    <li><a href="">Resume</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="https://www.linkedin.com/in/sanya-gera-696a78293/" target="_blank">LinkedIn</a></li>
+                    </ul>
+            </div>
+        </header>
+
+        <section id="name-picture">
+            <div class="container small">
+                <h1>Hi, <br>
+                    I'm Sanya Gera.</h1>
+            </div>
+        </section>
+
+        
+
+        <section id="introduction" class="dark">
+            <div class="container">
+                <p>I am an organised, efficient and hard working person, 
+                    and am willing to discover and accept new ideas which can 
+                    be put into practice effectively. I am currently honing my 
+                    skills in DSA, CP, and Web Development. 
+                    With a strong foundation in problem-solving and coding, 
+                    I am excited to apply my knowledge and am looking 
+                    forward to gaining my first work experience in the tech industry.
+                </p>
+
+                <div id="button">
+                    <button class="btn">My Resume</button>
+                </div>
+            </div>
+        </section>
+
+        <div id="my-picture">
+            <img width="350px" src="../images/my-images/IMG_3099.jpg" />
+        </div>
+
+        <section class="contact-section" id="contact">
+            <h2>Contact Me</h2>
+            <p>If you have any questions or would like to get in touch, feel free to contact me via the form below!</p>
+    
+            <form class="contact-form" action="#" method="post">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+    
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+    
+                <label for="message">Your Message</label>
+                <textarea id="message" name="message" placeholder="Enter your message" rows="5" required></textarea>
+    
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+
+        <script>
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+    
+                // Send form data to EmailJS
+                emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this)
+                    .then(function() {
+                        document.getElementById('response-message').style.display = 'block';
+                    }, function(error) {
+                        console.error('FAILED...', error);
+                    });
+    
+                // Clear form after submission
+                this.reset();
+            });
+        </script>
+
+        <!-- <a target="_blank" href="https://icons8.com/icon/p2y8Ul4lQV8D/logo">Logo</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a> -->
+
+    </body>
+</html>
